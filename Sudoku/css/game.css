@@ -1,0 +1,197 @@
+/*----------------------------------------game table-----------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,800;1,900&display=swap');
+body{ 
+    font-family: "Poppins",sans-serif;
+
+}
+html{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: url("../BG.jpg") no-repeat;
+    background-size: cover;
+}
+
+#page{
+    margin-top: 10%;
+}
+#sTable{
+    width: 486px;
+    margin: auto;
+    padding: 0;
+}
+.sGroup{
+    background: rgba(189,195,199,0.7);
+}
+.sGroup2{
+    background: rgba(255,255,255,0.7);
+}
+.sBox{
+    float: left;
+    display: inline-block;
+    margin: 1px;
+    min-height: 50px;
+    line-height: 50px;
+    min-width: 50px;
+    border-radius: 5px;
+    font-size: 40px;
+    font-weight: bolder;
+    text-align: center;
+}
+.edit{
+    color: forestgreen;
+    -webkit-transition: background 0.2s ease-in-out;
+    transition: background 0.2s ease-in-out;
+}
+.edit:hover{
+    background: rgba(255,153,0,0.8);
+    cursor: pointer;
+}
+.sBox-active{
+    background: orange;
+}
+.sWrong{
+    background: red;
+}
+
+/*----------------------------------------select panel-----------------------------------*/
+.select{
+    position: fixed;
+}
+.select div{
+    height: 0px;
+    width: 0px;
+    line-height: 60px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border: 1px solid white;
+    border-radius: 60px;
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    opacity: 0;
+    background: #2c3e50;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.2s, font-size 0.3s;
+    transition: transform 0.3s, opacity 0.2s, font-size 0.3s;
+}
+.active div{
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+.active div:hover{
+    opacity: 1;
+    font-size: 40px;
+}
+.selectActive{
+    background: orange;
+}
+.active div:first-child {
+    background: #e74c3c;
+    -webkit-transform: translate3d(0, -80px, 0);
+    transform: translate3d(0, -80px, 0);
+}
+.active div:nth-child(2) {
+    background: #e67e22;
+    -webkit-transform: translate3d(60px, -60px, 0);
+    transform: translate3d(60px, -60px, 0);
+}
+.active div:nth-child(3) {
+    background: #f1c40f;
+    -webkit-transform: translate3d(90px, -8px, 0);
+    transform: translate3d(90px, -8px, 0);
+}
+.active div:nth-child(4) {
+    background: #3498db;
+    -webkit-transform: translate3d(80px, 52px, 0);
+    transform: translate3d(80px, 52px, 0);
+}
+.active div:nth-child(5) {
+    background: #2ecc71;
+    -webkit-transform: translate3d(30px, 88px, 0);
+    transform: translate3d(30px, 88px, 0);
+}
+.active div:nth-child(6) {
+    background: #1abc9c;
+    -webkit-transform: translate3d(-30px, 88px, 0);
+    transform: translate3d(-30px, 88px, 0);
+}
+.active div:nth-child(7) {
+    background: #7f8c8d;
+    -webkit-transform: translate3d(-80px, 52px, 0);
+    transform: translate3d(-80px, 52px, 0);
+}
+.active div:nth-child(8) {
+    background: #9b59b6;
+    -webkit-transform: translate3d(-90px, -8px, 0);
+    transform: translate3d(-90px, -8px, 0);
+}
+.active div:nth-child(9) {
+    background: #34495e;
+    -webkit-transform: translate3d(-60px, -60px, 0);
+    transform: translate3d(-60px, -60px, 0);
+}
+.navbar{
+    position: absolute;
+    top: 0;
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    color: white;     
+    width: 100%;
+    padding: 10px 0;
+    font-family: 'Poppins', sans-serif;
+    z-index: 999;
+    transition: all 0.3s ease;
+  }
+  .navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .navbar .logo a{
+    text-decoration: none;
+    align-items: center;
+    color: #fff;
+    font-size: 60px;
+    font-weight: 600;
+  }
+  .navbar .menu li{
+    list-style: none;
+    display: inline-block;
+  }
+  
+  .navbar .menu li a{
+    color:#fff ;
+    font-size: 30px;
+    font-weight: 500px;
+    margin-right: 50px;
+    transition: color 0.3s ease;
+  }
+  .navbar .menu li a:hover{
+    color: #333;
+  }
+
+/*--------------------------------------responsive design-------------------------------------*/
+/*--------------------for smartphone--------------------*/
+@media only screen and (min-device-width : 732px) and (max-width : 568px){
+    #page{
+        width: 100%;
+        height: 100%;
+    }
+    #sTable{
+        width: 306px;
+        height: 100%;
+        margin: auto;
+    }
+    .sBox{
+        width: 40px;
+        height: 40px;
+        line-height: 30px;
+        font-size: 20px;
+    }
+    
+
+}
